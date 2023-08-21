@@ -1,0 +1,575 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+body {
+  background-color: #ffffff;
+  font-size: 18px;
+  color: rgb(99, 73, 3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: rgb(93, 54, 4);
+  color: #ffffff;
+  font-size: large;
+  width: 300px;
+  height: 50px;
+  border-radius: 40px;
+  margin: 100px;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 7vh;
+}
+
+#subscribe {
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  padding: 12px;
+  inset: 0;
+  margin: -32vh auto;
+  opacity: 1;
+}
+
+.subBtnAnn {
+  animation: shrink 4s forwards ease;
+}
+
+@keyframes shrink {
+  0% {
+    opacity: 1;
+    scale: 1;
+    background-color: rgb(93, 54, 4);
+    color: #ffffff;
+  }
+  70% {
+    opacity: 0.6;
+    scale: 0.4;
+    border-radius: 50%;
+    background-color: #d3826a;
+    color: transparent;
+  }
+
+  100% {
+    border-radius: 50%;
+opacity: 0;
+scale: 0;
+  }
+}
+
+.lottie {
+  display: none;
+}
+
+.animation {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  margin: -10rem auto;
+  height: 50%;
+  opacity: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+#face {
+  font-size: 100px;
+}
+
+/* this is a reference to an id #  */
+#ashley {
+  font-size: 212px;
+  color: rgb(8, 99, 173);
+}
+
+/* this is a reference to a class .  */
+.evrybody {
+  rotate: 90deg;
+}
+
+.square {
+  border: 2px darkorange solid;
+}
+
+.fontdreamy {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: Dancing Script, Verdana, Arial, Tahoma, Serif;
+}
+
+.active {
+  /* font-family: fantasy; */
+  color: rgb(9, 11, 87);
+}
+
+.liststyle {
+  background-color: black;
+  background-image: repeating-linear-gradient(
+    30deg,
+    rgb(62, 36, 4) 0%,
+    rgb(41, 107, 206) 30%,
+    transparent,
+    rgb(13, 13, 97) 60%
+  );
+  border: 4px double black;
+}
+
+nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #ffffff;
+  border-bottom: #0c2b61 2px solid;
+  a:hover {
+    color: rgb(76, 199, 236);
+  }
+}
+ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+ul li {
+  list-style: none;
+  /* flex-direction: row; */
+  line-height: 100px;
+}
+
+/* a hover is what I select for a color change if you hover over a tab. I could not only do color becuase the color verbible in the u li a area is more specific and would over rule a color alone. */
+
+a:hover {
+  color: rgb(76, 199, 236);
+}
+ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bolder;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(99, 73, 3);
+}
+
+ol {
+  margin-left: 20%;
+  margin-top: 10vh;
+  font-size: 14px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 0 40px;
+  text-align: left;
+}
+
+/* I gave the parent box a property of display flex */
+
+.flexbox {
+  margin-left: 8%;
+  margin-block-start: 9%;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 100px;
+  display: flex;
+  /* flex-direction: column; */
+  border: 2px rgb(92, 69, 2);
+  justify-content: space-around;
+}
+
+/* Below I made a child flexbox to fit with in the orginal flexbox. I made width and height 100 because I wanted them to be a box. */
+/* drop shadow is box-shadow. It is a good balance to do 7px for the blur. Dont do a black background with this feature becuase the blur won't shadow it will glow. I can use dark gray if needed */
+.flex_child {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px rgb(1, 5, 58) solid;
+  position: relative;
+  box-shadow: 5px 5px 7px rgb(95, 118, 231);
+}
+
+.flex_child2 {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px rgb(1, 5, 58) solid;
+  position: relative;
+}
+
+#footdown {
+  margin-top: 40vh;
+}
+
+/* border radius is 50% to produce a circle element which is below */
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background: rgb(99, 73, 3);
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-left: 10px;
+  animation: mermaid 2s infinite alternate;
+}
+
+.aspen {
+  width: 50px;
+  height: 50px;
+  background: rgb(197, 9, 147);
+  border-radius: 50%;
+  margin-top: 150px;
+  margin-left: 70px;
+  scale: 3;
+}
+
+/* for a pseudo element to work you have to have content for it to show. example below. */
+.aspen::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: azure;
+  display: flex;
+  transform: translate(20px, 10px);
+}
+
+.aspen::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin: px;
+  background-color: rgb(0, 19, 19);
+  display: flex;
+  transform: translate(20px, 20px);
+}
+
+.about {
+  background-image: url(assets/topsphere-media-rWxMfj9y0F4-unsplash.jpg);
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.about {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 4rem;
+  padding-left: 20vw;
+  padding-right: 20vw;
+
+  @media screen and (max-width: 850px) {
+    background-size: cover;
+  }
+}
+
+/* Text between <hr> tag */
+
+/* Images between <hr> tag */
+
+hr.style-six {
+  padding: 0;
+  border: none;
+  height: 1px;
+  background-image: -webkit-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  background-image: -moz-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  background-image: -ms-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  background-image: -o-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  color: #333;
+  text-align: center;
+}
+
+hr.style-six:after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -2.1em;
+  font-size: 1.5em;
+  padding: 19px 1.75em;
+  height: 50px;
+}
+
+h2 {
+  display: flex;
+  flex-direction: row;
+  font-family: "Tangerine", cursive;
+  font-size: 60px;
+}
+
+h2:before,
+h2:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 2px solid #000;
+  margin: auto;
+}
+
+#quote {
+  float: right;
+  text-align: center;
+  font-family: "Tangerine", cursive;
+  font-size: 36px;
+}
+
+.quote {
+  font-family: "Tangerine", cursive;
+  font-size: 60px;
+}
+
+.home {
+  background-image: url(assets/massimo-rinaldi-FmgZ5xzDG-s-unsplash.jpg);
+  border-bottom: #0c2b61 2px solid;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 4rem;
+  padding-left: 20vw;
+  padding-right: 20vw;
+}
+
+.teatypes {
+  background-image: url(assets/arisa-chattasa-EDCBVN9HhrQ-unsplash.jpg);
+  border-bottom: #0c2b61 2px solid;
+}
+
+.teatypes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.teatypes {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 4rem;
+  padding-left: 20vw;
+  padding-right: 20vw;
+}
+
+.accompaniments {
+  background-image: url(assets/anjeli-lundblad-4BHcRGCDXQI-unsplash.jpg);
+  border-bottom: #0c2b61 2px solid;
+}
+
+.accompaniments::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.accompaniments {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 4rem;
+  padding-left: 20vw;
+  padding-right: 20vw;
+}
+
+.shop {
+  background-image: url(assets/teatypes.jpg);
+  border-bottom: #0c2b61 2px solid;
+}
+
+.shop::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.shop {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 4rem;
+  padding-left: 20vw;
+  padding-right: 20vw;
+}
+
+.ContactUs {
+  background-image: url(assets/contactuss.png);
+  border-bottom: #0c2b61 2px solid;
+}
+
+.ContactUs::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.ContactUs {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 4rem;
+  padding-left: 20vw;
+  padding-right: 20vw;
+}
+
+footer {
+  display: flex;
+  position: relative;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 10px;
+}
+
+.aboutpageheader {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 36px;
+  font-weight: bold;
+  /* margin-top: 0px; */
+}
+
+.logo {
+  position: absolute;
+  left: 2em;
+  top: 2em;
+  max-width: 12%;
+  max-height: 10%;
+}
+
+.logoFooter {
+  max-width: 6%;
+  max-height: 5%;
+}
+
+section {
+  margin: 25px 50px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+}
