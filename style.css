@@ -556,6 +556,7 @@ footer {
 
 .logo {
   position: absolute;
+  z-index: 11;
   left: 2em;
   top: 2em;
   max-width: 12%;
