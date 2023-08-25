@@ -57,8 +57,8 @@ button {
 
   100% {
     border-radius: 50%;
-opacity: 0;
-scale: 0;
+    opacity: 0;
+    scale: 0;
   }
 }
 
@@ -169,6 +169,17 @@ ol {
   text-align: left;
 }
 
+ol, #white {
+  margin-left: 40%;
+  margin-top: 10vh;
+  font-size: 14px;
+  color: #ffffff;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 0 40px;
+  text-align: left;
+}
+
 /* I gave the parent box a property of display flex */
 
 .flexbox {
@@ -232,7 +243,7 @@ ol {
   scale: 3;
 }
 
-/* for a pseudo element to work you have to have content for it to show. example below. */
+/* for a pseudo element to work I have to have content for it to show. example below. */
 .aspen::after {
   content: "";
   width: 10px;
